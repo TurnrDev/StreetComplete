@@ -89,7 +89,7 @@ class AddPlacePhone(
 
     override val commitMessage = "Determine phone number for places (Private SC quest)"
     override val wikiLink = "Key:phone"
-    override val icon = R.drawable.ic_quest_housenumber
+    override val icon = R.drawable.ic_quest_phone
     override val isReplaceShopEnabled = true
 
     override fun getTitle(tags: Map<String, String>): Int {
