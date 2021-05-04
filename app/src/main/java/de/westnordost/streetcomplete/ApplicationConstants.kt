@@ -3,7 +3,7 @@ package de.westnordost.streetcomplete
 object ApplicationConstants {
     const val NAME = "Paint The Town Red (StreetComplete fork)"
     const val USER_AGENT = NAME + " " + BuildConfig.VERSION_NAME
-    const val QUESTTYPE_TAG_KEY = "StreetComplete:quest_type"
+    const val QUESTTYPE_TAG_KEY = "StreetComplete:quest_type" // https://github.com/westnordost/StreetComplete/issues/1894
 
     const val MAX_DOWNLOADABLE_AREA_IN_SQKM = 12.0
     const val MIN_DOWNLOADABLE_AREA_IN_SQKM = 0.1
