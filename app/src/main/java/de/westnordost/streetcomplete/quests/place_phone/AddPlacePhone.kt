@@ -30,9 +30,8 @@ class AddPlacePhone(
         mapOf(
             "amenity" to arrayOf(
                 // common
-                "restaurant", "cafe", "ice_cream", "fast_food", "bar", "pub", "biergarten", "food_court", "nightclub", // eat & drink
+                "restaurant", "cafe", "ice_cream", "fast_food", "food_court",                                          // eat & drink
                 "cinema", "planetarium", "casino",                                                                     // amenities
-                "townhall", "courthouse", "embassy", "community_centre", "youth_centre", "library",                    // civic
                 "bank", "bureau_de_change", "money_transfer", "post_office", "marketplace", "internet_cafe",           // commercial
                 "car_wash", "car_rental", "fuel",                                                                      // car stuff
                 "dentist", "doctors", "clinic", "pharmacy", "veterinary",                                              // health
@@ -83,12 +82,6 @@ class AddPlacePhone(
                 // name only
                 "dance", "nature_reserve"
             ),
-            "landuse" to arrayOf(
-                "cemetery", "allotments"
-            ),
-            "military" to arrayOf(
-                "airfield", "barracks", "training_area"
-            )
         ).map { it.key + " ~ " + it.value.joinToString("|") }.joinToString("\n  or ") + "\n" + """
         )
         and !phone and !contact:phone and phone:signed != no
