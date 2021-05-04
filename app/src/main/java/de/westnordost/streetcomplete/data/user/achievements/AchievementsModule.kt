@@ -659,6 +659,7 @@ object AchievementsModule {
                     "AddToiletAvailability",
                     "AddToiletsFee",
                     "AddPlaceName",
+                    "AddPlacePhone",
                     "DetermineRecyclingGlass",
                     "AddRecyclingContainerMaterials",
                     "AddClothingBinOperator",

@@ -72,6 +72,7 @@ import de.westnordost.streetcomplete.quests.parking_fee.AddParkingFee
 import de.westnordost.streetcomplete.quests.parking_type.AddParkingType
 import de.westnordost.streetcomplete.quests.pitch_lit.AddPitchLit
 import de.westnordost.streetcomplete.quests.place_name.AddPlaceName
+import de.westnordost.streetcomplete.quests.place_phone.AddPlacePhone
 import de.westnordost.streetcomplete.quests.playground_access.AddPlaygroundAccess
 import de.westnordost.streetcomplete.quests.postbox_collection_times.AddPostboxCollectionTimes
 import de.westnordost.streetcomplete.quests.postbox_ref.AddPostboxRef
@@ -127,6 +128,7 @@ import javax.inject.Singleton
         AddRoadName(),
         AddPlaceName(featureDictionaryFuture),
         AddOneway(),
+        AddPlacePhone(featureDictionaryFuture),
         // not that useful as such, but should be shown before CheckExistence because this is
         // basically the check whether the postbox is still there in countries in which it is enabled
         AddPostboxCollectionTimes(),
