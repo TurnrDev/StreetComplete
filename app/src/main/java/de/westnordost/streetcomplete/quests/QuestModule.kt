@@ -23,6 +23,7 @@ import de.westnordost.streetcomplete.quests.building_type.AddBuildingType
 import de.westnordost.streetcomplete.quests.building_underground.AddIsBuildingUnderground
 import de.westnordost.streetcomplete.quests.bus_stop_bench.AddBenchStatusOnBusStop
 import de.westnordost.streetcomplete.quests.bus_stop_shelter.AddBusStopShelter
+import de.westnordost.streetcomplete.quests.bus_stop_flag.AddBusStopFlag
 import de.westnordost.streetcomplete.quests.car_wash_type.AddCarWashType
 import de.westnordost.streetcomplete.quests.construction.MarkCompletedBuildingConstruction
 import de.westnordost.streetcomplete.quests.construction.MarkCompletedHighwayConstruction
@@ -242,6 +243,7 @@ import javax.inject.Singleton
         AddPowerPolesMaterial(),
         AddCarWashType(),
         AddBenchStatusOnBusStop(),
+        AddBusStopFlag(),
         AddBenchBackrest(),
         AddTrafficSignalsButton(),
         AddPostboxRoyalCypher()
