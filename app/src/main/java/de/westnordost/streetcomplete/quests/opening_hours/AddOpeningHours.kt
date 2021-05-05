@@ -38,7 +38,7 @@ class AddOpeningHours (
         mapOf(
             "amenity" to arrayOf(
                 // common
-                "restaurant", "cafe", "ice_cream", "fast_food", "bar", "pub", "biergarten", "food_court", "nightclub", // eat & drink
+                "restaurant", "cafe", "ice_cream", "fast_food", "bar", "biergarten", "food_court", "nightclub", // eat & drink
                 "cinema", "planetarium", "casino",                                                                     // amenities
                 "townhall", "courthouse", "embassy", "community_centre", "youth_centre", "library",                    // civic
                 "bank", "bureau_de_change", "money_transfer", "post_office", "marketplace", "internet_cafe",           // commercial
