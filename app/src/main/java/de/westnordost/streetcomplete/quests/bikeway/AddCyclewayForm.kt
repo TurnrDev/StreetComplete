@@ -1,13 +1,12 @@
 package de.westnordost.streetcomplete.quests.bikeway
 
 import android.os.Bundle
-import androidx.annotation.AnyThread
 import android.view.View
+import androidx.annotation.AnyThread
 import androidx.appcompat.app.AlertDialog
-
 import de.westnordost.streetcomplete.R
-import de.westnordost.streetcomplete.data.osm.geometry.ElementPolylinesGeometry
 import de.westnordost.streetcomplete.data.elementfilter.toElementFilterExpression
+import de.westnordost.streetcomplete.data.osm.geometry.ElementPolylinesGeometry
 import de.westnordost.streetcomplete.quests.AbstractQuestFormAnswerFragment
 import de.westnordost.streetcomplete.quests.OtherAnswer
 import de.westnordost.streetcomplete.quests.StreetSideRotater
@@ -29,16 +28,24 @@ class AddCyclewayForm : AbstractQuestFormAnswerFragment<CyclewayAnswer>() {
         if (!isDefiningBothSides && isNoRoundabout) {
             result.add(OtherAnswer(R.string.quest_cycleway_answer_contraflow_cycleway) { showBothSides() })
         }
-        result.add(OtherAnswer(R.string.quest_cycleway_answer_no_bicycle_infrastructure) { noBikewayHereHint() })
+        result.add(OtherAnswer(R.string.quest_cycleway_answer_no_bicycle_infrastructure) { confirmNoCyclewayHere() })
         return result
     }
 
-    private fun noBikewayHereHint() {
-        activity?.let { AlertDialog.Builder(it)
-            .setTitle(R.string.quest_cycleway_answer_no_bicycle_infrastructure_title)
-            .setMessage(R.string.quest_cycleway_answer_no_bicycle_infrastructure_explanation)
-            .setPositiveButton(android.R.string.ok, null)
-            .show()
+    private fun confirmNoCyclewayHere() {
+        activity?.let {
+            AlertDialog.Builder(it)
+                .setMessage(R.string.quest_generic_confirmation_title)
+                .setPositiveButton(R.string.quest_generic_confirmation_yes) { _, _ ->
+                    applyAnswer(
+                        CyclewayAnswer(
+                            left = CyclewaySide(Cycleway.NONE),
+                            right = CyclewaySide(Cycleway.NONE),
+                        )
+                    )
+                }
+                .setNegativeButton(R.string.quest_generic_confirmation_no, null)
+                .show()
         }
     }
 
