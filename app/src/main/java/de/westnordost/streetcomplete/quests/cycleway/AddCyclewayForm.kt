@@ -1,4 +1,4 @@
-package de.westnordost.streetcomplete.quests.bikeway
+package de.westnordost.streetcomplete.quests.cycleway
 
 import android.os.Bundle
 import android.view.View
