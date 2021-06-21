@@ -37,8 +37,8 @@ android {
         applicationId = "de.westnordost.streetcomplete"
         minSdkVersion(17)
         targetSdkVersion(30)
-        versionCode = 3204
-        versionName = "32.1"
+        versionCode = 3300
+        versionName = "33.0-beta1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
     }
@@ -169,7 +169,7 @@ dependencies {
     implementation("com.esotericsoftware.yamlbeans:yamlbeans:1.15")
 
     // opening hours parser
-    implementation("ch.poole:OpeningHoursParser:0.23.0")
+    implementation("ch.poole:OpeningHoursParser:0.23.4")
 
     // sunset-sunrise parser for lit quests
     implementation("com.luckycatlabs:SunriseSunsetCalculator:1.2")
